@@ -16,10 +16,10 @@ def write_ordereddict_list_to_file(odict_lst, file_name):
 
 if len(sys.argv) < 4:
     prog_name = sys.argv[0]
-    print('Usage: {}: <noshows_path> <total_set_size> <tranining_set_percentage>'.format(prog_name))
+    print('Usage: python {}: <noshows_path> <total_set_size> <tranining_set_percentage>'.format(prog_name[1:]))
     print('\tThe tool dynamically computes the No-Shows percentage.')
     print('\tNOTE: the tool selects a RANDOM sample from each one of the subsets, so different runs will produce different outputs.')
-    print('Example: {}: ~/home/iluoxchik/Documents/noshows.csv 1000 70'.format(prog_name))
+    print('Example: python {}: ~/home/iluoxchik/Documents/noshows.csv 1000 70'.format(prog_name[1:]))
     sys.exit(1)
 
 csv_path = sys.argv[1]
